@@ -4,15 +4,19 @@ import React, { useState } from "react";
 import MainPage from "./pages/main";
 import PostPage from "./pages/post";
 import AuthorPage from "./pages/author";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 function App() {
-  const [page] = useState(0);
 
   return (
       <div className="App">
-        {page === 0 && <MainPage />}
-        {page === 1 && <PostPage />}
-        {page === 2 && <AuthorPage />}
+          <BrowserRouter>
+              <Routes>
+                  <Route path="/" element={<MainPage />} />
+                  <Route path="/post" element={<PostPage />} />
+                  <Route path="/author" element={<AuthorPage />} />
+              </Routes>
+          </BrowserRouter>
       </div>
   );
 }
