@@ -4,9 +4,9 @@ import { Search } from "../../../components/elements/Search";
 import { Navigation } from "./Navigation";
 
 const navigation = [
-    { name: "Stories", to: "#stories" },
-    { name: "Post", to: "#post" },
-    { name: "Author", to: "#author" },
+    { name: "Stories", to: "/" },
+    { name: "Post", to: "/post" },
+    { name: "Author", to: "/author" },
 ];
 
 const Header = () => {
