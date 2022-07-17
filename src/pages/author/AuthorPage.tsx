@@ -13,7 +13,7 @@ import AuthorMeta from "./sections/AuthorMeta";
 const AuthorPage = () => {
     return (
         <MainLayout>
-            <AuthorMeta name={author.name} description={author.description} avatarUrl={author.avatarUrl} />
+            <AuthorMeta authorId={author.id} name={author.name} description={author.description} avatarUrl={author.avatarUrl} />
             <ArticlesList list={authorPosts} />
         </MainLayout>
     );

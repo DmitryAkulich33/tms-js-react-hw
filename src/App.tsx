@@ -13,8 +13,8 @@ function App() {
           <BrowserRouter>
               <Routes>
                   <Route path="/" element={<MainPage />} />
-                  <Route path="/post" element={<PostPage />} />
-                  <Route path="/author" element={<AuthorPage />} />
+                  <Route path="/post/:id" element={<PostPage />} />
+                  <Route path="/author/:id" element={<AuthorPage />} />
               </Routes>
           </BrowserRouter>
       </div>

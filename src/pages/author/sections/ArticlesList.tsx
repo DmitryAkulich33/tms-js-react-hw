@@ -15,7 +15,7 @@ const ArticlesList: React.FC<IArticleCardsListProps> = ({ list }) => {
                         <div key={article.id} className="authorpostbox">
                             <ArticleCard
                                 key={article.id}
-                                link={article.link}
+                                link={`/post/${article.id}`}
                                 thumbUrl={article.thumbUrl}
                                 title={article.title}
                                 text={article.text}

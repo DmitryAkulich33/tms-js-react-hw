@@ -1,5 +1,6 @@
 import React from "react";
 import { ITag } from "../../../types";
+import {Link} from "react-router-dom";
 
 export interface ITagsProps {
     tags?: ITag[];
@@ -11,7 +12,7 @@ const Tags: React.FC<ITagsProps> = ({ tags = [] }) => {
             <ul className="tags">
                 {tags.map((tag, index) => (
                     <li key={index}>
-                        <a href={tag.link ?? "#"}>{tag.title}</a>
+                        <Link to={tag.link ?? "#"}>{tag.title}</Link>
                     </li>
                 ))}
             </ul>

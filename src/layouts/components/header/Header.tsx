@@ -5,9 +5,11 @@ import { Navigation } from "./Navigation";
 
 const navigation = [
     { name: "Stories", to: "/" },
-    { name: "Post", to: "/post" },
-    { name: "Author", to: "/author" },
+    { name: "Post", to: "/post/1" },
+    { name: "Author", to: "/author/1" },
 ];
+
+const logo = require("../../../assets/img/logo.png")
 
 const Header = () => {
     const [searchString, setSearchString] = useState("");
@@ -27,7 +29,7 @@ const Header = () => {
             </button>
             <div className="container">
                 <a className="navbar-brand" href="/">
-                    <img src="assets/img/logo.png" alt="logo" />
+                    <img src={logo} alt="logo" />
                 </a>
                 <div className="collapse navbar-collapse" id="navbarsExampleDefault">
                     <Navigation links={navigation} />

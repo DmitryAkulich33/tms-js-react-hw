@@ -9,6 +9,7 @@ export interface IArticleCard {
     authorAvatarUrl?: string;
     authorLink?: string;
     thumbUrl?: string;
+    authorId: number;
 }
 
 export interface IArticle {
@@ -22,6 +23,7 @@ export interface IArticle {
     authorName?: string;
     authorAvatarUrl?: string;
     authorLink?: string;
+    authorId: number;
 }
 
 export interface ITag {
