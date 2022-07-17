@@ -28,7 +28,7 @@ const Header = () => {
                 <span className="navbar-toggler-icon"></span>
             </button>
             <div className="container">
-                <a className="navbar-brand" href="/">
+                <a className="navbar-brand" href="#">
                     <img src={logo} alt="logo" />
                 </a>
                 <div className="collapse navbar-collapse" id="navbarsExampleDefault">
