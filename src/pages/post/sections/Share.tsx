@@ -1,5 +1,6 @@
 import React from "react";
-import { IArticle } from "../../../types";
+import {IArticle} from "../../../types";
+import {Link} from "react-router-dom";
 
 const Heading: React.FC<Partial<IArticle>> = ({
                                                   title,
@@ -14,7 +15,7 @@ const Heading: React.FC<Partial<IArticle>> = ({
         <div className="mainheading">
             <div className="row post-top-meta">
                 <div className="col-md-2">
-                    <a href={authorLink ?? "#"}>
+                    <Link to={authorLink ?? "#"}>
                         <img
                             className="author-thumb"
                             src={
@@ -23,12 +24,12 @@ const Heading: React.FC<Partial<IArticle>> = ({
                             }
                             alt={authorName ?? ""}
                         />
-                    </a>
+                    </Link>
                 </div>
                 <div className="col-md-10">
-                    <a className="link-dark" href={authorLink ?? "#"}>
+                    <Link className="link-dark" to={authorLink ?? "#"}>
                         {authorName ?? "Admin"}
-                    </a>
+                    </Link>
                     {!!aboutAuthor && <span className="author-aboutAuthor">{aboutAuthor}</span>}
                     {!!postDate && <span className="post-date">{postDate}</span>}
                     {!!postDate && !!postReadTime && <span className="dot"></span>}

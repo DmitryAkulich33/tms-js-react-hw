@@ -1,13 +1,15 @@
-import React from "react";
-import { useState } from "react";
-import { Search } from "../../../components/elements/Search";
-import { Navigation } from "./Navigation";
+import React, {useState} from "react";
+import {Search} from "../../../components/elements/Search";
+import {Navigation} from "./Navigation";
+import {Link} from "react-router-dom";
 
 const navigation = [
-    { name: "Stories", to: "#stories" },
-    { name: "Post", to: "#post" },
-    { name: "Author", to: "#author" },
+    {name: "Stories", to: "/"},
+    {name: "Post", to: "/post/1"},
+    {name: "Author", to: "/author/1"},
 ];
+
+const logo = require("../../../assets/img/logo.png")
 
 const Header = () => {
     const [searchString, setSearchString] = useState("");
@@ -26,16 +28,16 @@ const Header = () => {
                 <span className="navbar-toggler-icon"></span>
             </button>
             <div className="container">
-                <a className="navbar-brand" href="/">
-                    <img src="assets/img/logo.png" alt="logo" />
-                </a>
+                <Link className="navbar-brand" to="/">
+                    <img src={logo} alt="logo"/>
+                </Link>
                 <div className="collapse navbar-collapse" id="navbarsExampleDefault">
-                    <Navigation links={navigation} />
-                    <Search value={searchString} onChange={(e) => setSearchString(e.target.value)} />
+                    <Navigation links={navigation}/>
+                    <Search value={searchString} onChange={(e) => setSearchString(e.target.value)}/>
                 </div>
             </div>
         </nav>
     );
 };
 
-export { Header };
+export {Header};

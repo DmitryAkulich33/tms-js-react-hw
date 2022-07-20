@@ -1,20 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 
 //pages
 import MainPage from "./pages/main";
 import PostPage from "./pages/post";
 import AuthorPage from "./pages/author";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 function App() {
-  const [page] = useState(0);
 
-  return (
-      <div className="App">
-        {page === 0 && <MainPage />}
-        {page === 1 && <PostPage />}
-        {page === 2 && <AuthorPage />}
-      </div>
-  );
+    return (
+        <div className="App">
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<MainPage/>}/>
+                    <Route path="/post/:id" element={<PostPage/>}/>
+                    <Route path="/author/:id" element={<AuthorPage/>}/>
+                </Routes>
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default App;

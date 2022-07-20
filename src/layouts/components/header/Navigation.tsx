@@ -1,21 +1,22 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 export interface INavigation {
     links: { name: string; to: string }[];
 }
 
-const Navigation: React.FC<INavigation> = ({ links }) => {
+const Navigation: React.FC<INavigation> = ({links}) => {
     return (
         <ul className="navbar-nav ml-auto">
             {links.map((link, index) => (
                 <li key={index} className="nav-item">
-                    <a className="nav-link" href={link.to}>
+                    <Link to={link.to} className="nav-link">
                         {link.name}
-                    </a>
+                    </Link>
                 </li>
             ))}
         </ul>
     );
 };
 
-export { Navigation };
+export {Navigation};

@@ -1,18 +1,19 @@
 import React from "react";
-import { IArticleCardCardProps } from "./ArticleCard";
-import { Card } from "./Card";
-import { CardBlock } from "./CardBlock";
+import {IArticleCardCardProps} from "./ArticleCard";
+import {Card} from "./Card";
+import {CardBlock} from "./CardBlock";
+import {Link} from "react-router-dom";
 
 const ArticleCardRow: React.FC<IArticleCardCardProps> = (props) => {
-    const { thumbUrl, title, link } = props;
+    const {thumbUrl, title, link} = props;
     return (
         <Card>
             <div className="row">
                 {!!thumbUrl && (
                     <div className="col-md-5 wrapthumbnail">
-                        <a href={link ?? "#"}>
-                            <img className="thumbnail" src={thumbUrl} alt={title ?? ""} />
-                        </a>
+                        <Link to={link ?? "#"}>
+                            <img className="thumbnail" src={thumbUrl} alt={title ?? ""}/>
+                        </Link>
                     </div>
                 )}
                 <div className="col-md-7">
@@ -23,4 +24,4 @@ const ArticleCardRow: React.FC<IArticleCardCardProps> = (props) => {
     );
 };
 
-export { ArticleCardRow };
+export {ArticleCardRow};

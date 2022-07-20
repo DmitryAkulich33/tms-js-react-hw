@@ -1,4 +1,4 @@
-import { IAuthor } from "../../types/author";
+import {IAuthor} from "../../types/author";
 
 const author: IAuthor = {
     id: 1,
@@ -8,4 +8,4 @@ const author: IAuthor = {
     avatarUrl: "https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x",
 };
 
-export { author };
+export {author};
