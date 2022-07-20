@@ -1,5 +1,5 @@
 import React from "react";
-import { IArticle } from "../../../types";
+import {IArticle} from "../../../types";
 import {Link} from "react-router-dom";
 
 const Heading: React.FC<Partial<IArticle>> = ({

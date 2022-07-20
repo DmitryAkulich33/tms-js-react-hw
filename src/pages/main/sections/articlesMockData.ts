@@ -1,4 +1,4 @@
-import { IArticleCard } from "../../../types";
+import {IArticleCard} from "../../../types";
 
 const Demopic1 = require("../../../assets/img/demopic/1.jpg")
 const Demopic2 = require("../../../assets/img/demopic/2.jpg")
@@ -117,4 +117,4 @@ const featuredArticles: IArticleCard[] = [
     },
 ];
 
-export { recentArticles, featuredArticles };
+export {recentArticles, featuredArticles};

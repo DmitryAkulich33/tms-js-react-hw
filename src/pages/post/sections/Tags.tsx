@@ -1,12 +1,12 @@
 import React from "react";
-import { ITag } from "../../../types";
+import {ITag} from "../../../types";
 import {Link} from "react-router-dom";
 
 export interface ITagsProps {
     tags?: ITag[];
 }
 
-const Tags: React.FC<ITagsProps> = ({ tags = [] }) => {
+const Tags: React.FC<ITagsProps> = ({tags = []}) => {
     return (
         <div className="after-post-tags">
             <ul className="tags">

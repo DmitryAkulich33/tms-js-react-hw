@@ -1,4 +1,4 @@
-import React, {useEffect, useMemo, useState} from "react";
+import React from "react";
 import {useParams} from "react-router-dom";
 import {RelatedSection} from "../../components/sections/Related";
 
@@ -11,12 +11,10 @@ import Content from "./sections/Content";
 import Heading from "./sections/Heading";
 
 //mock data
-import {posts} from "./postMockData";
+import {post} from "./postMockData";
 
 const PostPage = () => {
-    const { id } = useParams<{ id: string }>();
-
-    const post = posts.find(post => post.id === Number(id));
+    const {id} = useParams<{ id: string }>();
 
     return (
         <MainLayout>
@@ -28,9 +26,9 @@ const PostPage = () => {
                         </div>
                         <div className="col-md-8 col-md-offset-2 col-xs-12">
                             <Heading
-                                title={`${post.title} id: ${post.id} `}
+                                title={`${post.title} id: ${id} `}
                                 aboutAuthor={post.aboutAuthor}
-                                authorLink={`/author/${post.id}`}
+                                authorLink={`/author/${post.authorId}`}
                                 authorName={post.authorName}
                                 authorAvatarUrl={post.authorAvatarUrl}
                                 postDate={post.postDate}

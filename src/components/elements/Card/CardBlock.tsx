@@ -33,7 +33,7 @@ const CardBlock: React.FC<ICardBlockProps> = ({
             <div className="metafooter">
                 <div className="wrapfooter">
 					<span className="meta-footer-thumb">
-						<Link to={authorLink ?? "#"} >
+						<Link to={authorLink ?? "#"}>
 							<img
                                 className="author-thumb"
                                 src={
@@ -48,7 +48,7 @@ const CardBlock: React.FC<ICardBlockProps> = ({
 						<span className="post-name">
 							<Link to={authorLink ?? "#"}>{authorName ?? "Admin"}</Link>
 						</span>
-						<br />
+						<br/>
                         {!!postDate && <span className="post-date">{postDate}</span>}
                         {!!postDate && !!postReadTime && <span className="dot"></span>}
                         {!!postReadTime && <span className="post-read">{postReadTime}</span>}
@@ -67,4 +67,4 @@ const CardBlock: React.FC<ICardBlockProps> = ({
     );
 };
 
-export { CardBlock };
+export {CardBlock};

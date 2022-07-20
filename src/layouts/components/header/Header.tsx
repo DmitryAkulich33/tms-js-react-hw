@@ -1,12 +1,11 @@
-import React from "react";
-import { useState } from "react";
-import { Search } from "../../../components/elements/Search";
-import { Navigation } from "./Navigation";
+import React, {useState} from "react";
+import {Search} from "../../../components/elements/Search";
+import {Navigation} from "./Navigation";
 
 const navigation = [
-    { name: "Stories", to: "/" },
-    { name: "Post", to: "/post/1" },
-    { name: "Author", to: "/author/1" },
+    {name: "Stories", to: "/"},
+    {name: "Post", to: "/post/1"},
+    {name: "Author", to: "/author/1"},
 ];
 
 const logo = require("../../../assets/img/logo.png")
@@ -29,15 +28,15 @@ const Header = () => {
             </button>
             <div className="container">
                 <a className="navbar-brand" href="#">
-                    <img src={logo} alt="logo" />
+                    <img src={logo} alt="logo"/>
                 </a>
                 <div className="collapse navbar-collapse" id="navbarsExampleDefault">
-                    <Navigation links={navigation} />
-                    <Search value={searchString} onChange={(e) => setSearchString(e.target.value)} />
+                    <Navigation links={navigation}/>
+                    <Search value={searchString} onChange={(e) => setSearchString(e.target.value)}/>
                 </div>
             </div>
         </nav>
     );
 };
 
-export { Header };
+export {Header};

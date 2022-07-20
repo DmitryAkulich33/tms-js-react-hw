@@ -1,6 +1,6 @@
 import React from "react";
-import { Card } from "./Card";
-import { CardBlock, ICardBlockProps } from "./CardBlock";
+import {Card} from "./Card";
+import {CardBlock, ICardBlockProps} from "./CardBlock";
 import {Link} from "react-router-dom";
 
 export interface IArticleCardCardProps extends ICardBlockProps {
@@ -8,13 +8,13 @@ export interface IArticleCardCardProps extends ICardBlockProps {
 }
 
 const ArticleCard: React.FC<IArticleCardCardProps> = (props) => {
-    const { link, title, thumbUrl } = props;
+    const {link, title, thumbUrl} = props;
 
     return (
         <Card>
             {!!thumbUrl && (
                 <Link to={link ?? "#"}>
-                    <img className="img-fluid" src={thumbUrl} alt={title ?? ""} />
+                    <img className="img-fluid" src={thumbUrl} alt={title ?? ""}/>
                 </Link>
             )}
             <CardBlock {...props} />
@@ -22,4 +22,4 @@ const ArticleCard: React.FC<IArticleCardCardProps> = (props) => {
     );
 };
 
-export { ArticleCard };
+export {ArticleCard};

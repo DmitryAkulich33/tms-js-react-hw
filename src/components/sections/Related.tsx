@@ -1,8 +1,8 @@
 import React from "react";
-import { ArticleCard } from "../elements/Card";
+import {ArticleCard} from "../elements/Card";
 
 //mock data
-import { relatedArticles } from "./relatedMockData";
+import {relatedArticles} from "./relatedMockData";
 
 const RelatedSection = () => {
     return (
@@ -33,4 +33,4 @@ const RelatedSection = () => {
     );
 };
 
-export { RelatedSection };
+export {RelatedSection};

@@ -1,12 +1,12 @@
 import React from "react";
-import { ArticleCard } from "../../../components/elements/Card";
-import { IArticleCard } from "../../../types";
+import {ArticleCard} from "../../../components/elements/Card";
+import {IArticleCard} from "../../../types";
 
 export interface IArticleCardsListProps {
     list: IArticleCard[];
 }
 
-const ArticlesList: React.FC<IArticleCardsListProps> = ({ list }) => {
+const ArticlesList: React.FC<IArticleCardsListProps> = ({list}) => {
     return (
         <div className="graybg authorpage">
             <div className="container">
@@ -22,7 +22,7 @@ const ArticlesList: React.FC<IArticleCardsListProps> = ({ list }) => {
                                 postDate={article.postDate}
                                 postReadTime={article.postReadTime}
                                 authorName={article.authorName}
-                                authorLink={article.authorLink}
+                                authorLink={`/author/${article.authorId}`}
                                 authorAvatarUrl={article.authorAvatarUrl}
                             />
                         </div>

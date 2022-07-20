@@ -1,10 +1,10 @@
 import React from "react";
-import { ArticleCard, CardColumns } from "../../../components/elements/Card";
+import {ArticleCard, CardColumns} from "../../../components/elements/Card";
 
-import { SectionTitle } from "../../../components/sections/common";
+import {SectionTitle} from "../../../components/sections/common";
 
 //mock data
-import { recentArticles } from "./articlesMockData";
+import {recentArticles} from "./articlesMockData";
 
 const RecentSection = () => {
     return (
@@ -21,7 +21,7 @@ const RecentSection = () => {
                         postDate={article.postDate}
                         postReadTime={article.postReadTime}
                         authorName={article.authorName}
-                        authorLink={`/author/${article.authorLink}`}
+                        authorLink={`/author/${article.authorId}`}
                         authorAvatarUrl={article.authorAvatarUrl}
                     />
                 ))}

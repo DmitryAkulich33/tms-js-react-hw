@@ -5,7 +5,7 @@ export interface INavigation {
     links: { name: string; to: string }[];
 }
 
-const Navigation: React.FC<INavigation> = ({ links }) => {
+const Navigation: React.FC<INavigation> = ({links}) => {
     return (
         <ul className="navbar-nav ml-auto">
             {links.map((link, index) => (
@@ -19,4 +19,4 @@ const Navigation: React.FC<INavigation> = ({ links }) => {
     );
 };
 
-export { Navigation };
+export {Navigation};

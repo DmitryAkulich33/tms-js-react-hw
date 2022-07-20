@@ -17,4 +17,4 @@ const Footer = () => {
     );
 };
 
-export { Footer };
+export {Footer};
