@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {Search} from "../../../components/elements/Search";
 import {Navigation} from "./Navigation";
+import {Link} from "react-router-dom";
 
 const navigation = [
     {name: "Stories", to: "/"},
@@ -27,9 +28,9 @@ const Header = () => {
                 <span className="navbar-toggler-icon"></span>
             </button>
             <div className="container">
-                <a className="navbar-brand" href="#">
+                <Link className="navbar-brand" to="/">
                     <img src={logo} alt="logo"/>
-                </a>
+                </Link>
                 <div className="collapse navbar-collapse" id="navbarsExampleDefault">
                     <Navigation links={navigation}/>
                     <Search value={searchString} onChange={(e) => setSearchString(e.target.value)}/>
